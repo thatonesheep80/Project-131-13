@@ -1,0 +1,23 @@
+body
+{
+  background-size: cover;
+  background-position: center;
+}
+
+.heading
+{
+    width: 100%;
+    font-size: 25px;
+    box-shadow: 5px 5px 5px rgb(197, 110, 10);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.objs
+{
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
