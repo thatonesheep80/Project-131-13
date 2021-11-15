@@ -6,7 +6,7 @@ function setup()
 {
     canvas = createCanvas(640, 420);
     objectDetector = ml5.objectDetector("cocossd", modelLoaded);
-    document.getElementById("status1").innerHTML = "Status : Detecting Objects";
+    document.getElementById("status2").innerHTML = "Status : Detecting Objects";
 }
 
 function modelLoaded()
@@ -24,7 +24,7 @@ function draw()
     {
         for (i = 0; i < objects.length; i++)
         {
-            document.getElementById("status1").innerHTML = "Status : Object Detected";
+            document.getElementById("status2").innerHTML = "Status : Object Detected";
             
             fill("#FF0000");
             percent = floor(objects[i].confidence * 100);
@@ -33,14 +33,14 @@ function draw()
             stroke("#FF0000");
             rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
 
-            document.getElementById("Output1").innerHTML = "There are 2 big objects shown in this picture, out of which the cocossd model has identified " + objects[i].length + " objects."
+            document.getElementById("Output2").innerHTML = "There are 2 big objects shown in this picture, out of which the cocossd model has identified " + objects[i].length + " objects."
         }
     }
 }
 
 function preload()
 {
-    img = loadImage("tv and laptop.jpg");
+    img = loadImage("fruits.jpg");
 }
 
 function gotResult(error, results)
@@ -53,7 +53,7 @@ function gotResult(error, results)
     objects = results;
 }
 
-function back1()
+function back2()
 {
     window.location = "index.html";
 }
